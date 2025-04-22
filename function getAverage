@@ -1,0 +1,10 @@
+function getAverage(scores) {
+  if (scores.length === 0) 
+    {
+        return 0; 
+    }
+   let suma = scores.reduce((acumulador, valorActual) => acumulador + valorActual, 0);
+    let promedio = suma / scores.length;
+    return promedio;
+
+}
