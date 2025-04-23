@@ -1,0 +1,54 @@
+** start of undefined **
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <input type="text" id="text-input" placeholder="Enter text here">
+    <button id="check-btn">Check</button>
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+
+
+** end of undefined **
+
+** start of undefined **
+
+document.getElementById('check-btn').addEventListener('click', function() {
+    let inputText = document.getElementById('text-input').value;
+    let resultElement = document.getElementById('result');
+
+    if (!inputText) {
+        alert('Please input a value');
+        return;
+    }
+    let caracteresEspeciales = /[_,.\-():\/\\]/g;
+    let cleanedText = inputText.replace(caracteresEspeciales,'').replace(/\s+/g, '').toLowerCase();
+    let reversedText = cleanedText.split('').reverse().join('');
+    let originalText = reversedText.split('').reverse().join('');
+
+if ( originalText == reversedText) {
+        resultElement.textContent = `${inputText} is a palindrome`;
+    } else {
+        resultElement.textContent = `${inputText} is not a palindrome`;
+    }
+});
+
+
+
+** end of undefined **
+
